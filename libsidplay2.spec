@@ -79,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsidplay2.so
 %{_libdir}/libsidplay2.la
+%{_libdir}/sidplay
 %{_includedir}/sidplay
 %{_pkgconfigdir}/libsidplay2.pc
 
