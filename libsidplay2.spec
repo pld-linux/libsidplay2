@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
 # Source0-md5:	40e61c8edbce16e1a8d0e31169869d99
 URL:		http://sidplay2.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,6 +55,7 @@ Ten pakiet zawiera statyczn± wersjê libsidplay.
 %setup -q -n sidplay-libs-%{version}
 
 %build
+cp /usr/share/automake/config.sub .
 %{__autoconf}
 %configure
 %{__make}
