@@ -1,15 +1,15 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
 Summary(pl):	Biblioteka odtwarzaj±ca muzyczki z Commodore 64 i emuluj±ca uk³ad SID
 Name:		libsidplay2
-Version:	2.1.0
+Version:	2.1.1
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
-# Source0-md5:	40e61c8edbce16e1a8d0e31169869d99
+# Source0-md5:	7ea0ba5dc1da4604d15eaae001f7d2a7
 URL:		http://sidplay2.sourceforge.net/
-BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +29,8 @@ stereo z C64.
 Summary:	Header files for compiling apps that use libsidplay
 Summary(pl):	Pliki nag³ówkowe do budowania aplikacji u¿ywaj±cych libsidplay
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
+Requires:	libstdc++-devel
 
 %description devel
 This package contains the header files for compiling applications that
@@ -43,7 +44,7 @@ biblioteki libsidplay.
 Summary:	Static libsidplay library
 Summary(pl):	Statyczna biblioteka libsidplay
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static version of libsidplay.
@@ -55,8 +56,7 @@ Ten pakiet zawiera statyczn± wersjê libsidplay.
 %setup -q -n sidplay-libs-%{version}
 
 %build
-cp /usr/share/automake/config.sub .
-%{__autoconf}
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
@@ -75,16 +75,21 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc libsidplay/{AUTHORS,ChangeLog,TODO}
-%attr(755,root,root) %{_libdir}/libsidplay2.so.*.*
+%attr(755,root,root) %{_libdir}/libsidplay2.so.*.*.*
+%attr(755,root,root) %{_libdir}/libsidutils.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsidplay2.so
+%attr(755,root,root) %{_libdir}/libsidutils.so
 %{_libdir}/libsidplay2.la
+%{_libdir}/libsidutils.la
 %{_libdir}/sidplay
 %{_includedir}/sidplay
 %{_pkgconfigdir}/libsidplay2.pc
+%{_pkgconfigdir}/libsidutils.pc
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libsidplay2.a
+%{_libdir}/libsidutils.a
