@@ -5,7 +5,7 @@ Version:	2.1.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://download.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
 # Source0-md5:	40e61c8edbce16e1a8d0e31169869d99
 URL:		http://sidplay2.sourceforge.net/
 BuildRequires:	autoconf
@@ -17,10 +17,17 @@ Michael Schwendt. This version is written by Simon White and is cycle
 accurate for improved sound reproduction. Sidplay 2 is capable of
 playing all C64 mono and stereo file formats.
 
+%description -l pl
+Sidplay 2 to druga wersja z serii Sidplay oryginalnie stworzonej przez
+Michaela Schwendta. Ta wersja zosta³a napisana przez Simona White'a i
+jest dok³adna co do cyklu w celu zwiêkszonej wierno¶ci reprodukcji
+d¼wiêku. Sidplay 2 mo¿e odtwarzaæ wszystkie formaty plików mono i
+stereo z C64.
+
 %package devel
 Summary:	Header files for compiling apps that use libsidplay
 Summary(pl):	Pliki nag³ówkowe do budowania aplikacji u¿ywaj±cych libsidplay
-Group:		Libraries
+Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
@@ -34,7 +41,8 @@ biblioteki libsidplay.
 %package static
 Summary:	Static libsidplay library
 Summary(pl):	Statyczna biblioteka libsidplay
-Group:		Libraries
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}
 
 %description static
 This package contains static version of libsidplay.
@@ -52,7 +60,9 @@ Ten pakiet zawiera statyczn± wersjê libsidplay.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -70,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libsidplay2.so
 %{_libdir}/libsidplay2.la
 %{_includedir}/sidplay
-%{_libdir}/pkgconfig/libsidplay2.pc
+%{_pkgconfigdir}/libsidplay2.pc
 
 %files static
 %defattr(644,root,root,755)
