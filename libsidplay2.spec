@@ -7,6 +7,7 @@ License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
 # Source0-md5:	7ea0ba5dc1da4604d15eaae001f7d2a7
+Patch0:		%{name}-gcc34.patch
 URL:		http://sidplay2.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
@@ -54,6 +55,7 @@ Ten pakiet zawiera statyczn± wersjê libsidplay.
 
 %prep
 %setup -q -n sidplay-libs-%{version}
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.* unix
