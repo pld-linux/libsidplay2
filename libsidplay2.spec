@@ -2,7 +2,7 @@ Summary:	A Commodore 64 music player and SID chip emulator library
 Summary(pl):	Biblioteka odtwarzaj±ca muzyczki z Commodore 64 i emuluj±ca uk³ad SID
 Name:		libsidplay2
 Version:	2.1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
@@ -56,7 +56,10 @@ Ten pakiet zawiera statyczn± wersjê libsidplay.
 %setup -q -n sidplay-libs-%{version}
 
 %build
-cp -f /usr/share/automake/config.sub .
+cp -f /usr/share/automake/config.* unix
+cp -f /usr/share/automake/config.* libsidplay/unix
+cp -f /usr/share/automake/config.* libsidutils/unix
+cp -f /usr/share/automake/config.* resid
 %configure
 %{__make}
 
