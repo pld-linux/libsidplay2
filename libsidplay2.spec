@@ -1,5 +1,5 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
-Summary(pl):	Biblioteka odtwarzaj±ca muzyczki z Commodore 64 i emuluj±ca uk³ad SID
+Summary(pl.UTF-8):   Biblioteka odtwarzajÄ…ca muzyczki z Commodore 64 i emulujÄ…ca ukÅ‚ad SID
 Name:		libsidplay2
 Version:	2.1.1
 Release:	2
@@ -19,16 +19,16 @@ Michael Schwendt. This version is written by Simon White and is cycle
 accurate for improved sound reproduction. Sidplay 2 is capable of
 playing all C64 mono and stereo file formats.
 
-%description -l pl
+%description -l pl.UTF-8
 Sidplay 2 to druga wersja z serii Sidplay oryginalnie stworzonej przez
-Michaela Schwendta. Ta wersja zosta³a napisana przez Simona White'a i
-jest dok³adna co do cyklu w celu zwiêkszonej wierno¶ci reprodukcji
-d¼wiêku. Sidplay 2 mo¿e odtwarzaæ wszystkie formaty plików mono i
+Michaela Schwendta. Ta wersja zostaÅ‚a napisana przez Simona White'a i
+jest dokÅ‚adna co do cyklu w celu zwiÄ™kszonej wiernoÅ›ci reprodukcji
+dÅºwiÄ™ku. Sidplay 2 moÅ¼e odtwarzaÄ‡ wszystkie formaty plikÃ³w mono i
 stereo z C64.
 
 %package devel
 Summary:	Header files for compiling apps that use libsidplay
-Summary(pl):	Pliki nag³ówkowe do budowania aplikacji u¿ywaj±cych libsidplay
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do budowania aplikacji uÅ¼ywajÄ…cych libsidplay
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -37,21 +37,21 @@ Requires:	libstdc++-devel
 This package contains the header files for compiling applications that
 use libsidplay.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe do budowania aplikacji u¿ywaj±cych
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe do budowania aplikacji uÅ¼ywajÄ…cych
 biblioteki libsidplay.
 
 %package static
 Summary:	Static libsidplay library
-Summary(pl):	Statyczna biblioteka libsidplay
+Summary(pl.UTF-8):   Statyczna biblioteka libsidplay
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static version of libsidplay.
 
-%description static -l pl
-Ten pakiet zawiera statyczn± wersjê libsidplay.
+%description static -l pl.UTF-8
+Ten pakiet zawiera statycznÄ… wersjÄ™ libsidplay.
 
 %prep
 %setup -q -n sidplay-libs-%{version}
