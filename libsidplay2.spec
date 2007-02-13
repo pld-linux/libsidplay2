@@ -1,5 +1,5 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
-Summary(pl.UTF-8):   Biblioteka odtwarzająca muzyczki z Commodore 64 i emulująca układ SID
+Summary(pl.UTF-8):	Biblioteka odtwarzająca muzyczki z Commodore 64 i emulująca układ SID
 Name:		libsidplay2
 Version:	2.1.1
 Release:	2
@@ -28,7 +28,7 @@ stereo z C64.
 
 %package devel
 Summary:	Header files for compiling apps that use libsidplay
-Summary(pl.UTF-8):   Pliki nagłówkowe do budowania aplikacji używających libsidplay
+Summary(pl.UTF-8):	Pliki nagłówkowe do budowania aplikacji używających libsidplay
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -43,7 +43,7 @@ biblioteki libsidplay.
 
 %package static
 Summary:	Static libsidplay library
-Summary(pl.UTF-8):   Statyczna biblioteka libsidplay
+Summary(pl.UTF-8):	Statyczna biblioteka libsidplay
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
