@@ -1,0 +1,631 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- ViewCVS - http://viewcvs.sourceforge.net/
+by Greg Stein - mailto:gstein@lyra.org -->
+<head>
+<title>[gentoo-x86] Log of /media-libs/libsidplay/files/libsidplay2-gcc41.patch</title>
+<meta name="generator" content="ViewCVS 1.0_pre20050929" />
+<link rel="stylesheet" href="/docroot/styles.css" type="text/css" />
+</head>
+<body>
+<div class="vc_navheader">
+
+<form method="get" action="/viewcvs.py/">
+
+<table style="padding:0.1em;">
+<tr>
+<td><strong>
+
+<a href="/viewcvs.py/gentoo-x86/">
+
+[gentoo-x86]</a>
+/
+
+<a href="/viewcvs.py/gentoo-x86/media-libs/">
+
+media-libs</a>
+/
+
+<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/">
+
+libsidplay</a>
+/
+
+<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/">
+
+files</a>
+/
+
+
+
+libsidplay2-gcc41.patch
+
+
+</strong></td>
+<td style="text-align:right;">
+
+
+<strong>Project Root:</strong>
+<select name="root" onchange="submit()">
+
+
+<option value="*viewroots*">Repository Listing</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<optgroup label="CVS Repositories"><option>gentoo</option><option>gentoo-projects</option><option>gentoo-src</option><option selected="selected">gentoo-x86</option></optgroup>
+
+
+<optgroup label="Subversion Repositories"><option>apache</option><option>autoepatch</option><option>baselayout</option><option>catalyst</option><option>devmanual</option><option>dietlibc</option><option>eselect</option><option>genkernel</option><option>gentoo-alt</option><option>gentoo-bashcomp</option><option>gentoo-news</option><option>gentoo-perl</option><option>gentoo-python</option><option>gentoo-syntax</option><option>gentoo-vdr</option><option>gentoolkit</option><option>gli</option><option>glsr</option><option>hardened</option><option>hwdata</option><option>kde</option><option>keychain</option><option>linux-patches</option><option>livecd-tools</option><option>overlays</option><option>path-sandbox</option><option>php</option><option>planet</option><option>portage</option><option>sandbox</option><option>scire</option><option>votify</option><option>vps</option></optgroup>
+
+</select>
+<input type="submit" value="Go" />
+
+</td>
+</tr>
+</table>
+
+</form>
+
+</div>
+<h1><img style="float:right;" src="/docroot/images/gentoo-new.gif" alt="Gentoo" width="182" height="59" />Log of /media-libs/libsidplay/files/libsidplay2-gcc41.patch</h1>
+
+<p style="margin:0;">
+<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/"><img src="/docroot/images/back_small.png" width="16" height="16" alt="Parent Directory" /> Parent Directory</a>
+
+
+| <a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?view=graph"><img src="/docroot/images/cvsgraph_16x16.png" alt="View Revision Graph" /> Revision Graph</a>
+
+</p>
+<hr />
+<p>Default branch: MAIN<br />
+Bookmark a link to HEAD:
+(<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?view=markup">view</a>)
+(<a href="/viewcvs.py/*checkout*/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch">download</a>)
+
+(<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?view=annotate">annotate</a>)
+</p>
+
+
+
+ 
+
+
+
+<div>
+<hr />
+
+
+<a name="rev1.1"></a>
+<a name="HEAD"></a>
+
+
+Revision <strong>1.1</strong>
+ -
+(<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?rev=1.1&amp;view=markup">view</a>)
+(<a href="/viewcvs.py/*checkout*/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?rev=1.1">download</a>)
+
+
+(<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?annotate=1.1">annotate</a>)
+
+
+- <a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?rev=1.1&amp;r1=1.1&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Tue Dec 20 04:36:23 2005 UTC</em> (2 years ago) by <em>hanno</em>
+
+<br />Branch:
+
+<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?view=log&amp;only_with_tag=MAIN"><strong>MAIN</strong></a>
+
+
+
+<br />CVS Tags:
+
+<a href="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch?view=log&amp;only_with_tag=HEAD"><strong>HEAD</strong></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">libsidplay gcc41 fix
+(Portage version: 2.1_pre1)
+</pre>
+</div>
+
+ 
+
+
+
+ <hr />
+<p><a name="diff"></a>
+This form allows you to request diffs between any two revisions of
+a file. You may select a symbolic revision name using the selection
+box or you may type in a numeric name using the type-in text box.
+</p>
+<form method="get" action="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch" id="diff_select">
+<table cellpadding="2" cellspacing="0" class="auto">
+<tr>
+<td>&nbsp;</td>
+<td>
+
+Diffs between
+
+<select name="r1">
+<option value="text" selected="selected">Use Text Field</option>
+
+<option value="1.1:MAIN">MAIN</option>
+
+<option value="1.1:HEAD">HEAD</option>
+
+</select>
+<input type="text" size="12" name="tr1" value="1.1"
+onchange="document.diff_select.r1.selectedIndex=0" />
+
+and
+
+<select name="r2">
+<option value="text" selected="selected">Use Text Field</option>
+
+<option value="1.1:MAIN">MAIN</option>
+
+<option value="1.1:HEAD">HEAD</option>
+
+</select>
+<input type="text" size="12" name="tr2" value="1.1"
+onchange="document.diff_select.r1.selectedIndex=0" />
+
+</td>
+</tr>
+<tr>
+<td><input type="checkbox" name="makepatch" id="makepatch" value="1" /></td>
+<td><label for="makepatch">Generate output suitable for use with a patch
+program</label></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+Type of Diff should be a
+<select name="diff_format" onchange="submit()">
+<option value="h" selected="selected">Colored Diff</option>
+<option value="l" >Long Colored Diff</option>
+<option value="u" >Unidiff</option>
+<option value="c" >Context Diff</option>
+<option value="s" >Side by Side</option>
+</select>
+<input type="submit" value=" Get Diffs " />
+</td>
+</tr>
+</table>
+</form>
+
+
+
+<form method="get" action="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch">
+<div>
+<hr />
+<a name="branch"></a>
+<input type="hidden" name="view" value="log" />
+View only Branch:
+<select name="only_with_tag" onchange="submit()">
+<option value="" selected="selected">Show all branches</option>
+
+<option value="MAIN" >MAIN</option>
+
+</select>
+<input type="submit" value=" View Branch " />
+</div>
+</form>
+
+
+<form method="get" action="/viewcvs.py/gentoo-x86/media-libs/libsidplay/files/libsidplay2-gcc41.patch">
+<div>
+<hr />
+<a name="logsort"></a>
+<input type="hidden" name="view" value="log" />
+Sort log by:
+<select name="logsort" onchange="submit()">
+<option value="cvs" >Not sorted</option>
+<option value="date" selected="selected">Commit date</option>
+<option value="rev" >Revision</option>
+</select>
+<input type="submit" value=" Sort " />
+</div>
+</form>
+
+
+<hr />
+<table>
+<tr>
+<td>
+<address><a href="mailto:www@gentoo.org">www@gentoo.org</a></address><br />
+Powered by <a href="http://viewcvs.sourceforge.net/">ViewCVS 1.0_pre20050929</a>
+</td>
+<td style="text-align:right;">
+<h3><a href="/docroot/help_log.html">ViewCVS and CVS Help</a></h3>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
