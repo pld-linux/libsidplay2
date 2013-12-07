@@ -64,17 +64,6 @@
  };
 --- sidplay-libs-2.1.1.orig/libsidplay/include/sidplay/sidendian.h
 +++ sidplay-libs-2.1.1/libsidplay/include/sidplay/sidendian.h
-@@ -16,6 +16,10 @@
-  ***************************************************************************/
- /***************************************************************************
-  *  $Log$
-+ *  Revision 1.6  2005/11/20 11:02:06  s_a_white
-+ *  Work around for bug in gcc 4 (optimiser breaks if variable never has a
-+ *  direct assignment).
-+ *
-  *  Revision 1.5  2001/07/03 22:44:13  s_a_white
-  *  Added endian_16 to convert a 16 bit value to an array of 8s.
-  *
 @@ -141,7 +145,7 @@ inline void endian_16swap8 (uint_least16
  // Convert high-byte and low-byte to 16-bit word.
  inline uint_least16_t endian_16 (uint8_t hi, uint8_t lo)
