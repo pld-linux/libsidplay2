@@ -2,7 +2,7 @@ Summary:	A Commodore 64 music player and SID chip emulator library
 Summary(pl.UTF-8):	Biblioteka odtwarzająca muzyczki z Commodore 64 i emulująca układ SID
 Name:		libsidplay2
 Version:	2.1.1
-Release:	7
+Release:	8
 License:	GPL
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.gz
