@@ -10,6 +10,7 @@ Source0:	http://downloads.sourceforge.net/sidplay2/sidplay-libs-%{version}.tar.g
 Patch0:		gcc4-fixes.patch
 Patch1:		configure-fixes.patch
 Patch2:		pkg-config.patch
+Patch3:		gcc6-fixes.patch
 URL:		http://sidplay2.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -62,6 +63,7 @@ Ten pakiet zawiera statyczną wersję libsidplay.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 cd libsidplay
